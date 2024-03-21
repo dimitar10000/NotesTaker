@@ -16,7 +16,7 @@ export default function DeleteButton({noteId}) {
 
     return (
         <div>
-            <ConfirmDialog show={show} deleteFunc={confirmDeletion(noteId)} hideFunc={handleClose} />
+            <ConfirmDialog show={show} deleteFunc={() => {confirmDeletion(noteId); handleClose();}} hideFunc={handleClose} />
 
             <Button
             className="btn btn-danger btn-sm w-20 h-8"
