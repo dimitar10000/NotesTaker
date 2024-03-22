@@ -1,8 +1,10 @@
 import { notFound } from 'next/navigation';
 import React from 'react';
 import { Metadata } from "next";
-import EditForm from '@/app/ui/edit-form';
+import EditForm from '@/app/ui/edit/edit-form';
 import { fetchNoteById } from '@/app/lib/data';
+import { EditPageHeader } from '@/app/ui/headers';
+import BackButton from '@/app/ui/back-button';
 
 export const metadata = {
     title: "Edit note",
@@ -21,6 +23,8 @@ export default async function Page({params}) {
 
   return (
     <main>
+        <BackButton/>
+        <EditPageHeader id={id}/>
         <EditForm note={note}/>
     </main>
   );

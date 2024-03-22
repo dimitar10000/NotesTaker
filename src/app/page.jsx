@@ -1,12 +1,11 @@
-import Header from "./ui/header";
-import CreateButton from "./ui/create-button";
-import NotesTable from "./ui/notes-table";
+import {HomepageHeader} from "./ui/headers";
+import CreateButton from "./ui/home/create-button";
+import NotesTable from "./ui/home/notes-table";
 import { Metadata } from 'next';
-import Search from "./ui/search";
-import Pagination from "./ui/pagination";
+import Search from "./ui/home/search";
+import Pagination from "./ui/home/pagination";
 import { fetchNotes, fetchNotesPages, fetchFilteredNotes } from "./lib/data";
-import NoNotesImage from "./ui/no-notes-image";
-import Background from "./styles/background/background";
+import NoNotesImage from "./ui/home/no-notes-image";
 
 export const metadata = {
   title: "Home",
@@ -22,20 +21,23 @@ export default async function Home({ searchParams = { query, page } }) {
   const notes = await fetchFilteredNotes(query, currentPage);
 
   return (
-    <main className="w-full" style={{ position: "absolute"}}>
+    <main>
 
-      <Header />
-      <CreateButton />
-      <Search placeholder={"Search for note by details..."} />
+      <HomepageHeader />
+      <div className="d-flex flex-row justify-content-between">
+        <CreateButton />
+        <Search placeholder={"Search for note by details..."} />
+      </div>
 
       {allNotes.length > 0
         ? <NotesTable currentPage={currentPage} notes={notes} />
-        : <NoNotesImage />}
+        : <NoNotesImage />}      
 
       <div className="mt-5 flex w-full justify-center">
-        {<Pagination totalPages={totalPages} />}
+        {allNotes.length > 0
+        ? <Pagination totalPages={totalPages} />
+        : null}
       </div>
-      <Background />
     </main>
   );
 }
