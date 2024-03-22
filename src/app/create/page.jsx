@@ -1,6 +1,8 @@
-import CreateForm from "../ui/create-form";
+import CreateForm from "../ui/create/create-form";
 import React from 'react';
 import { Metadata } from "next";
+import { CreatePageHeader } from "../ui/headers";
+import BackButton from "../ui/back-button";
 
 export const metadata = {
     title: "Create new note",
@@ -10,6 +12,8 @@ export const metadata = {
 export default function Create() {
     return (
       <main>
+        <BackButton/>
+        <CreatePageHeader/>
         <CreateForm/>
       </main>
     );
