@@ -52,7 +52,7 @@ export async function fetchNotesPages(query) {
         const rows = await prisma.note.count({
             where: {
                 OR: [
-                    {title: {contains: query}},
+                        {title: {contains: query}},
                         {content: {contains: query}},
                         {date: {gte: dateToCheck}}
                 ]
