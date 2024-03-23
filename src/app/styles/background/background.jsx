@@ -3,6 +3,7 @@ import notebook from "./notebook.jpg"
 
 export default function Background() {
   return (
+    <div style={{position: "static"}}>
     <Image
       alt="Notes background"
       src={notebook}
@@ -16,5 +17,6 @@ export default function Background() {
         zIndex: "-1"
       }}
     />
+    </div>
   )
 }
