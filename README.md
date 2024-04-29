@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Used technologies - Bootstrap, Tailwind, PostgreSQL, Prisma
+
 ## Getting Started
 
 First, run the development server:
@@ -16,21 +18,24 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Examples
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Creating a new note
 
-## Learn More
+https://github.com/dimitar10000/NotesTaker/assets/36801867/c8e73215-c9ce-4ce4-a3b8-7dfac7eaae0b
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Searching for notes by title, content, etc
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+https://github.com/dimitar10000/NotesTaker/assets/36801867/df0a990d-6b16-4ece-9dee-08ce5e51843e
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Editing, deleting and marking a node
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+https://github.com/dimitar10000/NotesTaker/assets/36801867/298c2d41-2e48-4d03-9945-0d742247961f
+
+
+Sorting by length and date
+
+https://github.com/dimitar10000/NotesTaker/assets/36801867/e27aa806-6d4e-4156-95d1-7dbbf65f3aba
+
