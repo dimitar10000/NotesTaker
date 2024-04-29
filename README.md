@@ -30,7 +30,7 @@ Searching for notes by title, content, etc
 https://github.com/dimitar10000/NotesTaker/assets/36801867/df0a990d-6b16-4ece-9dee-08ce5e51843e
 
 
-Editing, deleting and marking a node
+Editing, deleting and marking a note
 
 https://github.com/dimitar10000/NotesTaker/assets/36801867/298c2d41-2e48-4d03-9945-0d742247961f
 
