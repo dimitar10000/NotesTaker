@@ -11,7 +11,8 @@ export const metadata = {
   description: "A simple site about taking notes"
 }
 
-export default async function Home({ searchParams = { query, page } }) {
+export default async function Home(props) {
+  const searchParams = await props.searchParams;
 
   const query = searchParams?.query || '';
   const currentPage = Number(searchParams?.page) || 1;

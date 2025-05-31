@@ -11,15 +11,16 @@ export const metadata = {
     description: "A page about editing an existing note"
 }
 
-export default async function Page({params}) {
-    console.log(params);
+export default async function Page(props) {
+  const params = await props.params;
+  console.log(params);
 
-    const id = params.id;
-    const note = await fetchNoteById(id);
+  const id = params.id;
+  const note = await fetchNoteById(id);
 
-    if (!note) {
-      notFound();
-    }
+  if (!note) {
+    notFound();
+  }
 
   return (
     <main>
