@@ -1,7 +1,6 @@
 import {HomepageHeader} from "./ui/headers";
 import CreateButton from "./ui/home/create-button";
 import NotesTable from "./ui/home/notes-table";
-import { Metadata } from 'next';
 import Search from "./ui/home/search";
 import Pagination from "./ui/home/pagination";
 import { fetchNotes, fetchNotesPages, fetchFilteredNotes } from "./lib/data";
