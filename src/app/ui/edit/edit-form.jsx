@@ -1,16 +1,16 @@
+import { useActionState } from "react";
 'use client'
 
 import { Button } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
-import { useFormState } from 'react-dom';
 import { updateNote } from "../../lib/actions";
 
 export default function EditForm({ note }) {
 
     const updateNoteById = updateNote.bind(null, note.id);
     const initialState = { message: null, errors: {} };
-    const [state, dispatch] = useFormState(updateNoteById, initialState);
+    const [state, dispatch] = useActionState(updateNoteById, initialState);
 
     return (
         <Form action={dispatch}

@@ -1,14 +1,14 @@
+import { useActionState } from "react";
 'use client'
 
 import { Button } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
-import { useFormState } from 'react-dom';
 import { createNote } from "../../lib/actions";
 
 export default function CreateForm() {
     const initialState = { message: null, errors: {} };
-    const [state, dispatch] = useFormState(createNote, initialState);
+    const [state, dispatch] = useActionState(createNote, initialState);
 
     return (
         <div>

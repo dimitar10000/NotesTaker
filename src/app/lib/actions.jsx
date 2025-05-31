@@ -4,8 +4,6 @@ import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import prisma from "./prisma";
 
-
-
 const FormSchema = z.object({
     id: z.coerce.number(),
     title: z.string(),
