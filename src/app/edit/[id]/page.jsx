@@ -1,6 +1,4 @@
 import { notFound } from 'next/navigation';
-import React from 'react';
-import { Metadata } from "next";
 import EditForm from '@/app/ui/edit/edit-form';
 import { fetchNoteById } from '@/app/lib/data';
 import { EditPageHeader } from '@/app/ui/headers';
