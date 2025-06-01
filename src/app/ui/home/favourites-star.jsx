@@ -20,7 +20,7 @@ export function FavouritesStar({ noteId,starredValue}) {
     }
 
     updateFunc();
-    }, [starred]);
+    }, [starred,noteId]);
 
     if (starred) {
         return (
